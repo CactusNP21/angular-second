@@ -1,0 +1,24 @@
+<div id="main">
+
+  <form [formGroup]="form" (ngSubmit)="register()" *ngIf="registration">
+    <h2>Register</h2>
+    <input type="text" formControlName="login" placeholder="Login">
+    <input type="text" formControlName="password" placeholder="Password">
+    <button type="submit" [disabled]="!form.valid"
+            [ngStyle]="form.valid ? {'cursor': 'pointer'}: {'cursor': 'not-allowed'}">REGISTER
+    </button>
+  </form>
+
+  <form [formGroup]="form" (ngSubmit)="login()" *ngIf="!registration">
+    <h2>Log in</h2>
+    <input type="text" formControlName="login" placeholder="Login">
+    <input type="text" formControlName="password" placeholder="Password">
+    <button type="submit" [disabled]="!form.valid"
+            [ngStyle]="form.valid ? {'cursor': 'pointer'}: {'cursor': 'not-allowed'}">LOG IN
+    </button>
+  </form>
+  <div id="choice">
+    <button (click)="registration = false">Log in</button>
+    <button (click)="registration = true">Register</button>
+  </div>
+</div>

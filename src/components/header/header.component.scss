@@ -1,0 +1,18 @@
+header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2vw;
+  padding: 1vw 4vw;
+}
+
+app-filter{
+  display: flex;
+  flex-direction: row;
+  gap: 1vw;
+}
+
+app-sort{
+  display: flex;
+  flex-direction: row;
+}

@@ -1,0 +1,33 @@
+#main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 30vw;
+  height: 30vw;
+  background: aqua;
+  border-radius: 10%;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+  width: 70%;
+}
+
+input{
+  height: 4vw;
+}
+
+button {
+  background: white;
+}
+#choice{
+  margin-top: 1vw;
+  display: flex;
+  gap: 1vw;
+}

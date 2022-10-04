@@ -1,0 +1,11 @@
+<button class="bg-gray-400 w-48 p-2 rounded-md bg" id="sort" (click)="sortOpen = !sortOpen">
+  Sort By Dropdown
+</button>
+<div *ngIf="sortOpen" class="flex flex-col absolute w-48 gap-2 top-16 bg-yellow-400">
+  <form [formGroup]="form" class="flex-col">
+    <label><input type="radio" formControlName="sortBy" value="name" (click)="sendField()">By name</label>
+    <label><input type="radio" formControlName="sortBy" value="date" (click)="sendField()">By date</label>
+  </form>
+</div>
+
+

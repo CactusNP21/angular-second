@@ -1,0 +1,10 @@
+<button (click)="this.opened = !this.opened">Filter</button>
+
+<div *ngIf="opened"  >
+  <input placeholder="Filter value" #filter [disabled]="disable" [(ngModel)]="filterValue"
+         (keyup)="sendFilterValue()">
+  <form [formGroup]="form" class="flex-col">
+    <label><input type="radio" formControlName="filterBy" value="name" (click)="sendFilterBy()"> Board name</label>
+    <label><input type="radio" formControlName="filterBy" value="tasks" (click)="sendFilterBy()"> Task name</label>
+  </form>
+</div>

@@ -1,0 +1,10 @@
+<div id="dashboard">
+<!--  <p>{{ ''| filter| async }}</p>-->
+  <app-add-board (sendBoard)="addBoard($event)"></app-add-board>
+  <!--<div [ngClass]="ascendance ? 'reverse' : ''" class="flex-col gap-5">-->
+  <ng-container *ngFor="let board of boards | filterNsort | async " >
+    <app-board [board]="board" (deleteBoard)="deleteBoard($event)"></app-board>
+  </ng-container>
+</div>
+<!--</div>-->
+<!--  | filterBy: filterBy : value| sortBy: sortBy-->
