@@ -1,15 +1,25 @@
-#dashboard{
-  display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
-  width: 100%;
-  place-items: center;
-  place-content: center;
-  gap: 2rem;
-}
-
+//#dashboard{
+//  display: grid;
+//  grid-template-columns: repeat(5, 1fr);
+//  place-items: center;
+//  place-content: center;
+//  gap: 2rem;
+//  width: 90vw;
+//}
+//
 app-add-board{
   display: flex;
   flex-direction: column;
+  justify-content: start;
+  align-self: center;
+}
+
+#dashboard{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 40%;
+  align-items: start;
+  gap: 2vw;
+  width: 50%;
+  margin: auto;
 }

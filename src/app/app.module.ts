@@ -1,22 +1,21 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {RouterOutlet} from "@angular/router";
 import {ComponentsModule} from "../components/components.module";
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {AuthorizationInterceptor} from "../interceptors/authorization.interceptor";
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     RouterOutlet,
-    ComponentsModule,
-    AppRoutingModule,
+    ComponentsModule, AppRoutingModule,
     HttpClientModule
   ],
   providers: [{
@@ -26,4 +25,5 @@ import {AuthorizationInterceptor} from "../interceptors/authorization.intercepto
   }],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

@@ -67,8 +67,8 @@ export class FilterNsortPipe implements PipeTransform {
         const {value, type} = filter
         return {boards: this.filterBoard(value, type, boards), sort: sort}
       }),
-      map((res) => {
-        return this.sortBoards(res.boards, res.sort)
+      map(({boards, sort}) => {
+        return this.sortBoards(boards, sort)
       })
     )
   }

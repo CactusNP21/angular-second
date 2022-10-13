@@ -1,27 +1,27 @@
 <div class="flex-row" (mouseleave)="expanded = false">
-<!--  [routerLink]="['board', board._id]" [queryParams]="{id: board._id}"-->
-  <div class="f-part" (mouseenter)="expanded = true" >
+
+  <div class="f-part" (mouseenter)="expanded = true"
+       [routerLink]="['board', board._id]" [queryParams]="{id: board._id}">
+
     <input #input value="{{ board.name }}" [disabled]="disabled"
-           (keyup.enter)="updateName()" (blur)="updateName()" >
+           (keyup.enter)="updateName()" (blur)="updateName()">
+
     <p class="text-sm">  {{ board.des }} </p>
     <p>{{ board.date | date: 'shortDate': '': 'en-UK' }}</p>
+
   </div>
 
-
-  <div *ngIf="expanded" class="s-part" (mouseleave)="expanded = false">
-    <div>
+  <div *ngIf="expanded" class="s-part" >
+    <div class="tasks">
       <p>TODO : {{ board.tasks.todo.length }}</p>
       <p>IN PROGRESS : {{ board.tasks.progress.length }}</p>
       <p>DONE : {{ board.tasks.done.length }}</p>
     </div>
-    <button (click)="edit()" class="edit">EDIT</button>
-    <button (click)="delete()">DELETE</button>
+    <div class="handle">
+      <button (click)="edit()" class="edit">EDIT</button>
+      <button (click)="delete()">DELETE</button>
+    </div>
   </div>
-
-
-  <!--  <button (click)="expanded = !expanded" class="w-36 h-12">expand</button>-->
-  <!--  <a [routerLink]="['/board', board._id]" [queryParams]="{id: board._id}">SSOSITE SOBAKi</a>-->
-
 
 </div>
 

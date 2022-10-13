@@ -20,6 +20,7 @@ export interface Tasks {
 }
 
 export interface Job {
+  _id?: string
   id: number
   name: string
 }

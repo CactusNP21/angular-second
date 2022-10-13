@@ -17,10 +17,10 @@ export class BoardComponent implements OnInit {
   @Input() board: Board
 
   @Output() deleteBoard = new EventEmitter()
-  @Output() updateBoard = new EventEmitter()
 
   constructor(private bsm: BoardManipulationService) {
   }
+
 
   ngOnInit(): void {
   }
@@ -47,11 +47,9 @@ export class BoardComponent implements OnInit {
 
   updateName() {
     this.disable()
-    this.board.name = this.inputName.nativeElement.value
     this.bsm.updateBoardName(this.inputName.nativeElement.value, this.board._id).subscribe(
       res => {
-        console.log(res)
-        this.updateBoard.emit(this.board)
+        this.board.name = this.inputName.nativeElement.value
       }
     )
   }

@@ -9,7 +9,6 @@ export class AuthorizationInterceptor implements HttpInterceptor {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    console.log('interceptor')
 
     if (sessionStorage.getItem('token')!) {
       const authReq = request.clone({

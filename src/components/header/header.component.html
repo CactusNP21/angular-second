@@ -1,14 +1,12 @@
 
-<header *ngIf="allowed">
-
+<header *ngIf="!allowed">
 
     <h1 *ngIf="home">Dashboard</h1>
     <h1 *ngIf="!home">Board</h1>
 
     <app-filter></app-filter>
       <app-sort></app-sort>
-      <!--      <button (click)="sendOrder(false)">ASC</button>-->
-      <!--      <button (click)="sendOrder(true)">DESC</button>-->
+
   <button (click)="logOut()">LOG OUT</button>
 
 </header>

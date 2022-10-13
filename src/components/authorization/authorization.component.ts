@@ -37,7 +37,7 @@ export class AuthorizationComponent implements OnInit {
       .subscribe(token => {
         console.log(token)
         sessionStorage.setItem('token', token)
-        this.router.navigate(['/dashboard'])
+        this.router.navigate(['/dashboards'])
       })
 
   }
